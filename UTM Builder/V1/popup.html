@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UTM Parameters Creator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>TAGLAB UTM Parameters Creator (Beta)</h1>
+            <form id="utmForm">
+                <div class="form-group">
+                    <label for="urlName">UTM URL Name (Optional)</label>
+                    <input id="urlName" type="text" placeholder="Enter URL name" />
+                </div>
+                <div class="form-group">
+                    <label for="url">Website URL *</label>
+                    <input id="url" required="" type="text" value="https://" placeholder="https://example.com" />
+                </div>
+                <div class="form-group">
+                    <label for="source">Campaign Source *</label>
+                    <input id="source" required="" type="text" placeholder="Google, Newsletter etc" />
+                    <div class="tag-container" data-input="source">
+                        <span class="tag blue">Google</span>
+                        <span class="tag green">Facebook</span>
+                        <span class="tag red">Newsletter</span>
+                        <span class="tag yellow">LinkedIn</span>
+                        <span class="tag purple">Twitter</span>
+                        <span class="tag cyan">Instagram</span>
+                        <span class="tag magenta">YouTube</span>
+                        <span class="tag orange">Bing</span>
+                        <span class="tag lime">Direct</span>
+                        <span class="tag pink">Partner</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="medium">Campaign Medium *</label>
+                    <input id="medium" required="" type="text" placeholder="CPC, Email etc" />
+                    <div class="tag-container" data-input="medium">
+                        <span class="tag dark-blue">CPC</span>
+                        <span class="tag dark-green">Email</span>
+                        <span class="tag dark-red">Banner</span>
+                        <span class="tag dark-yellow">Social</span>
+                        <span class="tag dark-purple">Affiliate</span>
+                        <span class="tag dark-cyan">Referral</span>
+                        <span class="tag dark-magenta">Organic</span>
+                        <span class="tag dark-orange">Display</span>
+                        <span class="tag dark-lime">Print</span>
+                        <span class="tag dark-pink">TV</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="campaign">Campaign Name</label>
+                    <input id="campaign" type="text" placeholder="Specific campaign name" />
+                </div>
+                <div class="form-group">
+                    <label for="term">Campaign Term (Optional)</label>
+                    <input id="term" type="text" placeholder="Identify the paid keywords" />
+                </div>
+                <div class="form-group">
+                    <label for="content">Campaign Content (Optional)</label>
+                    <input id="content" type="text" placeholder="Use to differentiate ads" />
+                </div>
+                <button id="generateButton" type="button">Generate URL</button>
+                <input id="fullUrl" style="margin-top: 10px;" readonly="readonly" type="text" placeholder="Generated URL will appear here" />
+            </form>
+        </div>
+        <div class="url-list">
+            <h2>Generated URLs</h2>
+            <ul id="urlHistory"></ul>
+            <button id="clearUrls" type="button" style="margin-top: 10px;">Clear Contents</button>
+        </div>
+    </div>
+    <script src="utm_creator.js"></script>
+</body>
+</html>

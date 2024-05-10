@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TAGLAB UTM Parameters Creator</title>
+	 <link rel="icon" type="image/png" href="https://i0.wp.com/taglab.net/wp-content/uploads/2020/04/cropped-Final-logo-file-1-1.png?fit=32%2C32&#038;ssl=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+<h1>
+    TAGLAB UTM Parameters Creator (Beta)
+    <a href="https://taglab.net?utm_source=utm_extension&utm_medium=owned-media" target="_blank" class="logo-link">
+        <img src="https://i0.wp.com/taglab.net/wp-content/uploads/2024/03/logo-final.png?resize=300%2C94&ssl=1" alt="TAGLAB" class="logo">
+    </a>
+</h1>
+<div id="counter" class="counter"><span class="trophy">🏆</span> UTMs Generated: <span id="count">0</span></div>
+
+            <form id="utmForm">
+                <div class="form-group">
+                    <label for="urlName">UTM URL Name (Optional)</label>
+                    <input type="text" id="urlName" placeholder="Enter URL name">
+                </div>
+                <div class="form-group">
+                    <label for="url">Website URL *</label>
+                    <input type="text" id="url" value="https://" required placeholder="https://example.com">
+                </div>
+                <div class="form-group">
+                    <label for="source">Campaign Source *</label>
+                    <input type="text" id="source" required placeholder="Google, Newsletter etc">
+                    <div class="tag-container" data-input="source">
+                        <span class="tag blue">Google</span>
+                        <span class="tag green">Facebook</span>
+                        <span class="tag red">Newsletter</span>
+                        <span class="tag yellow">LinkedIn</span>
+                        <span class="tag purple">Twitter</span>
+                        <span class="tag cyan">Instagram</span>
+                        <span class="tag magenta">YouTube</span>
+                        <span class="tag orange">Bing</span>
+                        <span class="tag lime">Direct</span>
+                        <span class="tag pink">Partner</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="medium">Campaign Medium *</label>
+                    <input type="text" id="medium" required placeholder="CPC, Email etc">
+                    <div class="tag-container" data-input="medium">
+                        <span class="tag dark-blue">CPC</span>
+                        <span class="tag dark-green">Email</span>
+                        <span class="tag dark-red">Banner</span>
+                        <span class="tag dark-yellow">Social</span>
+                        <span class="tag dark-purple">Affiliate</span>
+                        <span class="tag dark-cyan">Referral</span>
+                        <span class="tag dark-magenta">Organic</span>
+                        <span class="tag dark-orange">Display</span>
+                        <span class="tag dark-lime">Print</span>
+                        <span class="tag dark-pink">TV</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="campaign">Campaign Name</label>
+                    <input type="text" id="campaign" placeholder="Specific campaign name">
+                </div>
+                <div class="form-group">
+                    <label for="term">Campaign Term (Optional)</label>
+                    <input type="text" id="term" placeholder="Identify the paid keywords">
+                </div>
+                <div class="form-group">
+                    <label for="content">Campaign Content (Optional)</label>
+                    <input type="text" id="content" placeholder="Use to differentiate ads">
+                </div>
+                <button type="button" id="generateButton" class="wp-block-button__link wp-element-button">Generate URL</button>
+                <input style="background-color: ghostwhite;" type="text" id="fullUrl" readonly placeholder="Generated URL will appear here" style="margin-top: 10px;">
+            </form>
+			<p>This extension is still in beta. We hope to deliver useful experiences to our audiences. Kindly feel free to <a target="_blank" href="https://taglab.net/contact-us?utm_source=utm_extension&utm_medium=owned-media">conact us</a> in case of suggestions or issues (bugs).</p>
+        </div>
+        <div class="url-list">
+            <h2>Generated URLs</h2>
+			<button class="wp-block-button__link wp-element-button" id="clearUrls" style="margin-top: 10px;">Clear Contents</button>
+            <ul id="urlHistory"></ul>
+            
+        </div>
+    </div>
+    <script src="utm_creator.js"></script>
+</body>
+</html>
